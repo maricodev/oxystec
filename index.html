@@ -2,20 +2,21 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Outdoor Tech Store</title>
+<title>OXYSTEC</title>
 
 <style>
 body {
     margin: 0;
     font-family: Arial;
-    background: black;
+    background: #000;
     color: #0ff;
 }
 
+/* HEADER */
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 40px;
     border-bottom: 1px solid #0ff;
 }
@@ -35,6 +36,7 @@ header {
     text-shadow: 0 0 10px #0ff;
 }
 
+/* MENU */
 .menu a {
     color: #0ff;
     margin-left: 20px;
@@ -46,44 +48,67 @@ header {
     text-shadow: 0 0 10px #0ff;
 }
 
+/* TITULO */
 .section-title {
     text-align: center;
     margin-top: 40px;
     text-shadow: 0 0 10px #0ff;
 }
 
+/* GRID */
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
     padding: 20px;
 }
 
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
+/* CARD */
 .card {
-    background: #111;
+    background: #0a0a0a;
     border: 1px solid #0ff;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 15px;
     text-align: center;
-    overflow: hidden;
+    box-shadow: 0 0 10px #0ff33a;
+    transition: 0.3s;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #0ff;
+}
+
+/* IMAGEM */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #000;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* TEXTO */
+.card h3 {
+    margin-top: 10px;
+}
+
+/* BOTÃO */
 .botao {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px;
+    padding: 10px 15px;
     background: #0ff;
-    color: black;
+    color: #000;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
+    box-shadow: 0 0 10px #0ff;
+}
+
+.botao:hover {
+    background: #00cccc;
 }
 </style>
 </head>
@@ -92,14 +117,13 @@ header {
 
 <header>
     <div class="logo">
-        <img src="colesualogoaqui">
+        <img src="COLE_SUA_LOGO_AQUI">
         <h1>OXYSTEC</h1>
     </div>
 
     <div class="menu">
         <a href="#canivetes">Canivetes</a>
         <a href="#facas">Facas</a>
-        <a href="#outdoor">Outdoor</a>
     </div>
 </header>
 
@@ -107,7 +131,7 @@ header {
 <div class="container">
 
     <div class="card">
-        <img src="IMAGEM">
+        <img src="COLE_IMAGEM_AQUI">
         <h3>Canivete SOG Terminus XR</h3>
         <a class="botao" href="https://www.mercadolivre.com.br/canivete-tatico-sog-terminus-xr-limited-cryo-d2-g10-clip/p/MLBU3754082639" target="_blank">
             Ver no Mercado Livre
@@ -115,7 +139,7 @@ header {
     </div>
 
     <div class="card">
-        <img src="D_NQ_NP_2X_911581-MLB108501067641_032026-F.webp" style="width:100%;">
+        <img src="D_NQ_NP_2X_911581-MLB108501067641_032026-F.webp">
         <h3>Canivete Kershaw 2200</h3>
         <a class="botao" href="https://www.mercadolivre.com.br/canivete-tatico-kershaw-2200-aco-8cr13mov-titanio-clip/p/MLBU3763394472" target="_blank">
             Ver no Mercado Livre
@@ -123,7 +147,7 @@ header {
     </div>
 
     <div class="card">
-        <img src="IMAGEM">
+        <img src="COLE_IMAGEM_AQUI">
         <h3>Canivete CRKT Crawford Kasper</h3>
         <a class="botao" href="https://www.mercadolivre.com.br/canivete-crkt-tatico-crawford-kasper-desert-clip/p/MLBU3783950926" target="_blank">
             Ver no Mercado Livre
@@ -136,7 +160,7 @@ header {
 <div class="container">
 
     <div class="card">
-        <img src="IMAGEM">
+        <img src="COLE_IMAGEM_AQUI">
         <h3>Faca Kershaw Camp 5</h3>
         <a class="botao" href="https://www.mercadolivre.com.br/faca-tatica-kershaw-camp-5-bowie-aco-d2-full-tang-cabo-nylon/p/MLBU3838393658" target="_blank">
             Ver no Mercado Livre
