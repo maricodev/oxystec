@@ -51,17 +51,30 @@ header {
 }
 
 /* MENU */
-.menu a {
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+}
+
+.categoria {
+    padding: 10px 20px;
+    border: 2px solid #0ff;
+    border-radius: 50px;
     color: #0ff;
-    margin-left: 20px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #0ff;
 }
 
-.menu a:hover {
-    text-shadow: 0 0 10px #0ff;
+.categoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #0ff;
+    background: #0ff;
+    color: black;
 }
-
 /* TITULO */
 .section-title {
     text-align: center;
@@ -124,6 +137,24 @@ header {
 .botao:hover {
     background: #00cccc;
 }
+.rodape {
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 1px solid #0ff;
+    text-align: center;
+}
+
+.rodape img {
+    width: 40px;
+    margin: 0 10px;
+    filter: drop-shadow(0 0 5px #0ff);
+    transition: 0.3s;
+}
+
+.rodape img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px #0ff);
+}    
 </style>
 </head>
 
@@ -133,10 +164,11 @@ header {
     <img src="logooxystec.png" class="logo-img">
 </header>
 
-    <div class="menu">
-        <a href="#canivetes">Canivetes</a>
-        <a href="#facas">Facas</a>
-    </div>
+<div class="menu">
+    <a href="#canivetes" class="categoria">Canivetes</a>
+    <a href="#facas" class="categoria">Facas</a>
+    <a href="#outdoor" class="categoria">Outdoor</a>
+</div>
 </header>
 
 <h2 class="section-title" id="canivetes">Canivetes Táticos</h2>
@@ -180,6 +212,18 @@ header {
     </div>
 
 </div>
+<footer class="rodape">
+    <a href="https://instagram.com/oxystec" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+    </a>
 
+    <a href="https://mercadolivre.com.br/pagina/oxystec" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968843.png">
+    </a>
+
+    <a href="#" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968898.png">
+    </a>
+</footer>
 </body>
 </html>
