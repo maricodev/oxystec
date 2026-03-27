@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Outdoor Tech Store</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: black;
+    color: #0ff;
+}
+
+header {
+    text-align: center;
+    padding: 40px;
+    border-bottom: 1px solid #0ff;
+}
+
+h1 {
+    text-shadow: 0 0 15px #0ff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #0ff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #0ff;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    background: #0ff;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Equipamentos Outdoor & Táticos</h1>
+    <p>Produtos selecionados para aventura e sobrevivência</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_785566-MLU72614009372_112023-F.webp">
+        <h2>Canivete Vityaz Gyurza</h2>
+        <p>Compacto, resistente e ideal para uso diário.</p>
+        <a class="botao" href="https://www.mercadolivre.com.br/canivete-vityaz-poloz-gyurza-100-aco-65x13-cabo-madeira/p/MLBU3827362676" target="_blank">
+            Ver no Mercado Livre
+        </a>
+    </div>
+
+    <div class="card">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_896955-MLU72614200734_112023-F.webp">
+        <h2>Faca Tática Kershaw Camp 5</h2>
+        <p>Lâmina D2 full tang para uso pesado em trilhas.</p>
+        <a class="botao" href="https://www.mercadolivre.com.br/faca-tatica-kershaw-camp-5-bowie-aco-d2-full-tang-cabo-nylon/p/MLBU3838393658" target="_blank">
+            Ver no Mercado Livre
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
