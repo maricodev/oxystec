@@ -61,10 +61,12 @@ body {
     display: flex;
     gap: 20px;
     transition: transform 0.4s ease;
+    width: max-content; /* 🔥 ISSO AQUI É O SEGREDO */
 }
 
 .carrossel .card {
     min-width: calc(33.33% - 14px);
+    flex-shrink: 0; /* 🔥 IMPEDE QUE OS CARDS ENCOLHAM */
 }
 
 /* BOTÕES */
