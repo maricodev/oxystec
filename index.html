@@ -121,6 +121,32 @@ body {
 
 .redes img:hover {
     transform: scale(1.2);
+}
+
+/* linha neon */
+.linha {
+    height: 2px;
+    background: #0ff;
+    margin: 20px auto;
+    width: 60%;
+    box-shadow: 0 0 10px #0ff;
+}
+
+/* ícones SVG (carrinho) */
+.icone-svg {
+    width: 40px;
+    height: 40px;
+    fill: #fff;
+    margin: 0 12px;
+    transition: 0.3s;
+}
+
+.icone-svg:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px #0ff)
+            drop-shadow(0 0 10px #0ff)
+            drop-shadow(0 0 20px #0ff);
+}
     
 .icone-link {
     display: inline-block;
@@ -262,11 +288,21 @@ Compre pelo Mercado Livre
 <div class="redes">
 
 <a href="https://instagram.com/oxystec" target="_blank">
-<img class="icone" src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png">
+<img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png">
 </a>
 
 <a href="https://www.youtube.com/@OXYSTEC" target="_blank">
-<img class="icone" src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png">
+<img src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png">
+</a>
+
+<a href="https://mercadolivre.com.br/pagina/oxystec" target="_blank">
+<svg class="icone-svg" viewBox="0 0 24 24">
+  <path d="M6 7V6a6 6 0 1 1 12 0v1h2a1 1 0 0 1 1 1l-1.2 11a2 2 0 0 1-2 2H6.2a2 2 0 0 1-2-2L3 8a1 1 0 0 1 1-1h2zm2 0h8V6a4 4 0 1 0-8 0v1z"/>
+</svg>
+</a>
+
+<a href="https://shopee.com.br/oxystec" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968898.png">
 </a>
 
 </div>
