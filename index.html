@@ -122,30 +122,25 @@ body {
 .redes img:hover {
     transform: scale(1.2);
     
-.icone-svg {
+.icone-link {
+    display: inline-block;
+}
+
+.icone-bag {
     width: 40px;
-    fill: white; /* deixa branco */
+    height: 40px;
+    fill: #fff; /* branco garantido */
     margin: 0 12px;
     transition: 0.3s;
 }
 
-/* EFEITO NEON */
-.icone-svg:hover {
-    transform: scale(1.2);
+/* neon azul no hover */
+.icone-bag:hover {
+    transform: scale(1.15);
     filter: drop-shadow(0 0 5px #0ff)
             drop-shadow(0 0 10px #0ff)
             drop-shadow(0 0 20px #0ff);
 }
-    
-/* LINHA NEON */
-.linha {
-    height: 2px;
-    background: #0ff;
-    margin: 20px auto;
-    width: 60%;
-    box-shadow: 0 0 10px #0ff;
-}
-
 /* TEXTO FINAL */
 .confianca {
     font-size: 16px;
@@ -270,10 +265,10 @@ Compre pelo Mercado Livre
 <img class="icone" src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png">
 </a>
 
-<a href="https://mercadolivre.com.br/pagina/oxystec" target="_blank">
-<svg class="icone-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <path d="M6 2l1.5 4h11l-1.5 6h-9l-1-4H4V6h2l-1-4zm2 18a2 2 0 110-4 2 2 0 010 4zm8 0a2 2 0 110-4 2 2 0 010 4z"/>
-</svg>
+<a href="https://mercadolivre.com.br/pagina/oxystec" target="_blank" class="icone-link">
+  <svg viewBox="0 0 24 24" class="icone-bag">
+    <path d="M6 7V6a6 6 0 1 1 12 0v1h2a1 1 0 0 1 1 1l-1.2 11a2 2 0 0 1-2 2H6.2a2 2 0 0 1-2-2L3 8a1 1 0 0 1 1-1h2zm2 0h8V6a4 4 0 1 0-8 0v1z"/>
+  </svg>
 </a>
 
 <a href="https://www.youtube.com/@OXYSTEC" target="_blank">
