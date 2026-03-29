@@ -51,6 +51,50 @@ body {
     transform: translateY(-5px);
 }
 
+.carrossel {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.carrossel-container {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+
+.carrossel .card {
+    min-width: calc(33.33% - 14px);
+}
+
+/* BOTÕES */
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #0ff;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0ff;
+    z-index: 10;
+}
+
+.seta:hover {
+    box-shadow: 0 0 20px #0ff;
+}
+
+.seta.esquerda {
+    left: 10px;
+}
+
+.seta.direita {
+    right: 10px;
+}
+
 /* TITULOS */
 .section-title {
     text-align: center;
@@ -190,7 +234,12 @@ body {
 </div>
 
 <h2 class="section-title" id="canivetes">Canivetes</h2>
-<div class="container">
+
+<div class="carrossel">
+    
+<button class="seta esquerda" onclick="mover('canivetes', -1)">❮</button>
+
+<div class="carrossel-container" id="canivetes">
 
 <div class="card">
 <img src="canivete todo preto oxystec.webp">
@@ -208,6 +257,19 @@ body {
 <img src="canivete marrom desert oxystec.webp">
 <h3>Canivete CRKT</h3>
 <a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
+
+<!-- NOVOS PRODUTOS -->
+<div class="card">
+<img src="canivete-extra.webp">
+<h3>Outro Canivete</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
+
+</div>
+
+<button class="seta direita" onclick="mover('canivetes', 1)">❯</button>
+
 </div>
 
 </div>
@@ -323,6 +385,25 @@ Compre pelo Mercado Livre
 </div>
 
 </footer>
+<script>
+let posicoes = {};
 
+function mover(id, direcao) {
+    const container = document.getElementById(id);
+
+    if (!posicoes[id]) posicoes[id] = 0;
+
+    const largura = container.children[0].offsetWidth + 20;
+
+    posicoes[id] += direcao;
+
+    const max = container.children.length - 3;
+
+    if (posicoes[id] < 0) posicoes[id] = 0;
+    if (posicoes[id] > max) posicoes[id] = max;
+
+    container.style.transform = `translateX(-${posicoes[id] * largura}px)`;
+}
+</script>
 </body>
 </html>
