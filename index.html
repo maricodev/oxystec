@@ -122,6 +122,21 @@ body {
 .redes img:hover {
     transform: scale(1.2);
 }
+    .icone {
+    width: 40px;
+    margin: 0 12px;
+    filter: brightness(0) invert(1);
+    transition: 0.3s;
+}
+
+/* EFEITO NEON */
+.icone:hover {
+    transform: scale(1.2);
+    filter: brightness(0) invert(1)
+            drop-shadow(0 0 5px #0ff)
+            drop-shadow(0 0 10px #0ff)
+            drop-shadow(0 0 20px #0ff);
+}
 
 /* LINHA NEON */
 .linha {
@@ -181,8 +196,19 @@ body {
 <footer class="rodape">
 
 <div class="redes">
-<a href="https://instagram.com/oxystec"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
-<a href="https://mercadolivre.com.br/pagina/oxystec"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"></a>
+
+<a href="https://instagram.com/oxystec">
+    <img class="icone" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
+
+<a href="https://mercadolivre.com.br/pagina/oxystec">
+    <img class="icone" src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png">
+</a>
+
+<a href="https://www.youtube.com/@OXYSTEC">
+    <img class="icone" src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+</a>
+
 </div>
 
 <div class="linha"></div>
