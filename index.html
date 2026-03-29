@@ -122,31 +122,17 @@ body {
 .redes img:hover {
     transform: scale(1.2);
     
-.icone {
+.icone-svg {
     width: 40px;
+    fill: white; /* deixa branco */
     margin: 0 12px;
     transition: 0.3s;
 }
 
-/* NEON APENAS NO HOVER */
-.icone:hover {
+/* EFEITO NEON */
+.icone-svg:hover {
     transform: scale(1.2);
     filter: drop-shadow(0 0 5px #0ff)
-            drop-shadow(0 0 10px #0ff)
-            drop-shadow(0 0 20px #0ff);
-}
-
-.icone-carrinho {
-    width: 40px;
-    margin: 0 12px;
-    filter: invert(1); /* só ele fica branco */
-    transition: 0.3s;
-}
-
-.icone-carrinho:hover {
-    transform: scale(1.2);
-    filter: invert(1)
-            drop-shadow(0 0 5px #0ff)
             drop-shadow(0 0 10px #0ff)
             drop-shadow(0 0 20px #0ff);
 }
@@ -285,7 +271,9 @@ Compre pelo Mercado Livre
 </a>
 
 <a href="https://mercadolivre.com.br/pagina/oxystec" target="_blank">
-    <img class="icone-carrinho" src="carrinho.png">
+<svg class="icone-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path d="M6 2l1.5 4h11l-1.5 6h-9l-1-4H4V6h2l-1-4zm2 18a2 2 0 110-4 2 2 0 010 4zm8 0a2 2 0 110-4 2 2 0 010 4z"/>
+</svg>
 </a>
 
 <a href="https://www.youtube.com/@OXYSTEC" target="_blank">
