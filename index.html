@@ -2,37 +2,29 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
+
+<!-- FONTE PROFISSIONAL -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
 <title>OXYSTEC</title>
 
 <style>
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: 'Orbitron', sans-serif;
     background: #000;
     color: #0ff;
 }
 
 /* TOPO */
 .topo {
-    width: 100%;
-    border-bottom: 1px solid #0ff;
     text-align: center;
     padding: 15px 0;
+    border-bottom: 1px solid #0ff;
 }
 
 .logo-img {
-    width: 100%;
     max-height: 150px;
-    object-fit: contain;
-}
-
-/* FRASE DA MARCA */
-.slogan {
-    font-size: 14px;
-    margin-top: 5px;
-    color: #0ff;
-    opacity: 0.8;
-    text-shadow: 0 0 5px #0ff;
 }
 
 /* MENU */
@@ -40,7 +32,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 15px 0;
+    padding: 15px;
 }
 
 .categoria {
@@ -49,119 +41,101 @@ body {
     border-radius: 50px;
     color: #0ff;
     text-decoration: none;
-    font-weight: bold;
     transition: 0.3s;
     box-shadow: 0 0 10px #0ff;
 }
 
 .categoria:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px #0ff;
     background: #0ff;
     color: black;
+    transform: translateY(-5px);
 }
 
-/* TITULO */
+/* TITULOS */
 .section-title {
     text-align: center;
     margin-top: 40px;
-    text-shadow: 0 0 10px #0ff;
 }
 
-/* GRID */
+/* GRID FIXO 3 COLUNAS */
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
     padding: 20px;
 }
 
-/* CARD PREMIUM */
+/* CARD LIMPO */
 .card {
     background: #0a0a0a;
     border: 1px solid #0ff;
     border-radius: 12px;
     padding: 12px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 0 10px #0ff33a;
     transition: 0.3s;
 }
 
-/* EFEITO GLOW ANIMADO */
-.card::before {
-    content: "";
-    position: absolute;
-    width: 150%;
-    height: 150%;
-    background: linear-gradient(120deg, transparent, #0ff, transparent);
-    top: -50%;
-    left: -50%;
-    transform: rotate(25deg);
-    opacity: 0;
-    transition: 0.5s;
-}
-
-.card:hover::before {
-    opacity: 0.3;
-}
-
 .card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 0 25px #0ff;
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #0ff;
 }
 
 /* IMAGEM */
 .card img {
     width: 100%;
-    height: 160px;
+    height: 150px;
     object-fit: contain;
-    padding: 5px;
 }
 
 /* BOTÃO */
 .botao {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 15px;
+    padding: 10px;
     background: #0ff;
-    color: #000;
+    color: black;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 5px;
     font-weight: bold;
-    box-shadow: 0 0 10px #0ff;
-}
-
-.botao:hover {
-    background: #00cccc;
-}
-
-/* SELO CONFIANÇA */
-.confianca {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 14px;
-    line-height: 1.8;
 }
 
 /* RODAPÉ */
 .rodape {
-    margin-top: 30px;
-    padding: 20px;
-    border-top: 1px solid #0ff;
+    margin-top: 60px;
+    padding: 30px;
+    border-top: 2px solid #0ff;
     text-align: center;
 }
 
-.rodape img {
+/* ÍCONES */
+.redes {
+    margin-bottom: 20px;
+}
+
+.redes img {
     width: 40px;
     margin: 0 10px;
-    filter: drop-shadow(0 0 5px #0ff);
     transition: 0.3s;
 }
 
-.rodape img:hover {
+.redes img:hover {
     transform: scale(1.2);
-    filter: drop-shadow(0 0 10px #0ff);
+}
+
+/* LINHA NEON */
+.linha {
+    height: 2px;
+    background: #0ff;
+    margin: 20px auto;
+    width: 60%;
+    box-shadow: 0 0 10px #0ff;
+}
+
+/* TEXTO FINAL */
+.confianca {
+    font-size: 16px;
+    line-height: 2;
 }
 </style>
 </head>
@@ -170,7 +144,7 @@ body {
 
 <header class="topo">
     <img src="logooxystec.png" class="logo-img">
-    <div class="slogan">Seu mundo Outdoor • Exclusividade em cada produto</div>
+    <div>Seu mundo Outdoor • Exclusividade em cada produto</div>
 </header>
 
 <div class="menu">
@@ -183,62 +157,43 @@ body {
 <h2 class="section-title" id="canivetes">Canivetes Táticos</h2>
 <div class="container">
 
-    <div class="card">
-        <img src="canivete todo preto oxystec.webp">
-        <h3>Canivete SOG Terminus XR</h3>
-        <a class="botao" href="https://www.mercadolivre.com.br/canivete-tatico-sog-terminus-xr-limited-cryo-d2-g10-clip/p/MLBU3754082639" target="_blank">
-            Ver oferta 🔥
-        </a>
-    </div>
+<div class="card">
+<img src="canivete todo preto oxystec.webp">
+<h3>Canivete SOG Terminus XR</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
 
-    <div class="card">
-        <img src="D_NQ_NP_2X_911581-MLB108501067641_032026-F.webp">
-        <h3>Canivete Kershaw 2200</h3>
-        <a class="botao" href="https://www.mercadolivre.com.br/canivete-tatico-kershaw-2200-aco-8cr13mov-titanio-clip/p/MLBU3763394472" target="_blank">
-            Ver oferta 🔥
-        </a>
-    </div>
+<div class="card">
+<img src="D_NQ_NP_2X_911581-MLB108501067641_032026-F.webp">
+<h3>Canivete Kershaw 2200</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
+
+<div class="card">
+<img src="canivete marrom desert oxystec.webp">
+<h3>Canivete CRKT</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
 
 </div>
 
-<h2 class="section-title" id="facas">Facas Táticas</h2>
-<div class="container">
+<!-- RODAPÉ -->
+<footer class="rodape">
 
-    <div class="card">
-        <img src="faca tática oxystec.webp">
-        <h3>Faca Kershaw Camp 5</h3>
-        <a class="botao" href="https://www.mercadolivre.com.br/faca-tatica-kershaw-camp-5-bowie-aco-d2-full-tang-cabo-nylon/p/MLBU3838393658" target="_blank">
-            Ver oferta 🔥
-        </a>
-    </div>
-
+<div class="redes">
+<a href="https://instagram.com/oxystec"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+<a href="https://mercadolivre.com.br/pagina/oxystec"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"></a>
 </div>
 
-<h2 class="section-title" id="lanternas">Lanternas</h2>
-<div class="container"></div>
-
-<h2 class="section-title" id="ferramentas">Ferramentas</h2>
-<div class="container"></div>
+<div class="linha"></div>
 
 <div class="confianca">
-    <p><strong>Compra no Mercado Livre com:</strong></p>
-    ✔ Produtos selecionados<br>
-    ✔ Frete Grátis<br>
-    ✔ Qualidade garantida
+<strong>Realize seus pedidos pelo Mercado Livre!</strong><br><br>
+✔ Produtos selecionados<br>
+✔ Frete Grátis<br>
+✔ Qualidade garantida
 </div>
 
-<footer class="rodape">
-    <a href="https://instagram.com/oxystec" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-    </a>
-
-    <a href="https://mercadolivre.com.br/pagina/oxystec" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
-    </a>
-
-    <a href="#" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968898.png">
-    </a>
 </footer>
 
 </body>
