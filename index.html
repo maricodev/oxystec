@@ -54,17 +54,17 @@ body {
 .carrossel {
     position: relative;
     overflow: hidden;
-    padding: 20px;
 }
 
 .carrossel-container {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     transition: transform 0.4s ease;
 }
 
-.carrossel .card {
-    min-width: calc(33.33% - 14px);
+.carrossel-container .card {
+    min-width: calc(33.33% - 17px);
+    flex-shrink: 0;
 }
 
 /* BOTÕES */
@@ -215,6 +215,22 @@ body {
 .confianca {
     font-size: 16px;
     line-height: 2;
+}
+/* CARROSSEL FUNCIONANDO */
+.carrossel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carrossel-container {
+    display: flex;
+    gap: 25px;
+    transition: transform 0.4s ease;
+}
+
+.carrossel-container .card {
+    min-width: calc(33.33% - 17px);
+    flex-shrink: 0;
 }
 </style>
 </head>
@@ -423,24 +439,46 @@ Compre pelo Mercado Livre
 </div>
 
 </footer>
+    
 <script>
-let posicoes = {};
+let posicao = 0;
 
 function mover(id, direcao) {
     const container = document.getElementById(id);
+    const card = container.querySelector('.card');
 
-    if (!posicoes[id]) posicoes[id] = 0;
+    const largura = card.offsetWidth + 25; // espaço entre cards
 
-    const largura = container.children[0].offsetWidth + 20;
+    const total = container.children.length;
+    const visiveis = 3;
 
-    posicoes[id] += direcao;
+    posicao += direcao;
 
-    const max = container.children.length - 3;
+    if (posicao < 0) posicao = 0;
+    if (posicao > total - visiveis) posicao = total - visiveis;
 
-    if (posicoes[id] < 0) posicoes[id] = 0;
-    if (posicoes[id] > max) posicoes[id] = max;
+    container.style.transform = `translateX(-${posicao * largura}px)`;
+}
+</script>
 
-    container.style.transform = `translateX(-${posicoes[id] * largura}px)`;
+    <script>
+let posicao = 0;
+
+function mover(id, direcao) {
+    const container = document.getElementById(id);
+    const card = container.querySelector('.card');
+
+    const largura = card.offsetWidth + 25;
+
+    const total = container.children.length;
+    const visiveis = 3;
+
+    posicao += direcao;
+
+    if (posicao < 0) posicao = 0;
+    if (posicao > total - visiveis) posicao = total - visiveis;
+
+    container.style.transform = `translateX(-${posicao * largura}px)`;
 }
 </script>
 </body>
