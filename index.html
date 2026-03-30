@@ -232,6 +232,19 @@ body {
     min-width: calc(33.33% - 17px);
     flex-shrink: 0;
 }
+
+.carrossel-container {
+    display: flex;
+    gap: 25px;
+    transition: transform 0.4s ease;
+    will-change: transform; /* melhora o movimento */
+}
+
+.carrossel-container .card {
+    min-width: calc(33.33% - 17px);
+    flex-shrink: 0;
+}
+    
 </style>
 </head>
 
@@ -441,44 +454,28 @@ Compre pelo Mercado Livre
 </footer>
     
 <script>
-let posicao = 0;
-
 function mover(id, direcao) {
     const container = document.getElementById(id);
+
+    // pega posição atual
+    let atual = container.getAttribute("data-pos") || 0;
+    atual = parseInt(atual);
+
     const card = container.querySelector('.card');
-
-    const largura = card.offsetWidth + 25; // espaço entre cards
-
-    const total = container.children.length;
-    const visiveis = 3;
-
-    posicao += direcao;
-
-    if (posicao < 0) posicao = 0;
-    if (posicao > total - visiveis) posicao = total - visiveis;
-
-    container.style.transform = `translateX(-${posicao * largura}px)`;
-}
-</script>
-
-    <script>
-let posicao = 0;
-
-function mover(id, direcao) {
-    const container = document.getElementById(id);
-    const card = container.querySelector('.card');
-
     const largura = card.offsetWidth + 25;
 
     const total = container.children.length;
     const visiveis = 3;
 
-    posicao += direcao;
+    atual += direcao;
 
-    if (posicao < 0) posicao = 0;
-    if (posicao > total - visiveis) posicao = total - visiveis;
+    if (atual < 0) atual = 0;
+    if (atual > total - visiveis) atual = total - visiveis;
 
-    container.style.transform = `translateX(-${posicao * largura}px)`;
+    container.style.transform = `translateX(-${atual * largura}px)`;
+
+    // salva posição
+    container.setAttribute("data-pos", atual);
 }
 </script>
 </body>
