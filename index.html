@@ -466,36 +466,19 @@ Compre pelo Mercado Livre
 </footer>
     
 <script>
-function mover(id, direcao) {
-    const container = document.getElementById(id);
-
-    let atual = container.dataset.pos ? parseInt(container.dataset.pos) : 0;
-
-    const card = container.querySelector('.card');
-    const largura = card.offsetWidth + 25;
-
-    const total = container.children.length;
-    const visiveis = 3;
-
-    atual += direcao;
-
-    if (atual < 0) atual = 0;
-    if (atual > total - visiveis) atual = total - visiveis;
-
-    container.style.transform = "translateX(-" + (atual * largura) + "px)";
-
-    container.dataset.pos = atual;
-}
-</script>
-
-    <script>
 function scrollCarrossel(id, direcao) {
     const container = document.getElementById(id);
-    const largura = container.clientWidth;
+
+    if (!container) return;
+
+    const card = container.querySelector('.card');
+    if (!card) return;
+
+    const largura = card.offsetWidth + 20;
 
     container.scrollBy({
-        left: largura * direcao,
-        behavior: 'smooth'
+        left: largura * 3 * direcao, // move exatamente 3 produtos
+        behavior: "smooth"
     });
 }
 </script>
