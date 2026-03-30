@@ -53,17 +53,22 @@ body {
 
 .carrossel {
     position: relative;
-    overflow: hidden;
+    padding: 20px;
 }
 
 .carrossel-container {
     display: flex;
-    gap: 25px;
-    transition: transform 0.4s ease;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.carrossel-container::-webkit-scrollbar {
+    display: none;
 }
 
 .carrossel-container .card {
-    min-width: calc(33.33% - 17px);
+    min-width: calc(33.33% - 14px);
     flex-shrink: 0;
 }
 
@@ -266,7 +271,7 @@ body {
 
 <div class="carrossel">
     
-<button class="seta esquerda" onclick="mover('canivetes', -1)">❮</button>
+<button class="seta esquerda" onclick="scrollCarrossel('canivetes', -1)">❮</button>
 
 <div class="carrossel-container" id="canivetes">
 
@@ -303,7 +308,7 @@ body {
 
 </div>
 
-<button class="seta direita" onclick="mover('canivetes', 1)">❯</button>
+<button class="seta esquerda" onclick="scrollCarrossel('canivetes', -1)">❮</button>
 
 </div>
 
@@ -473,6 +478,18 @@ function mover(id, direcao) {
     container.style.transform = "translateX(-" + (atual * largura) + "px)";
 
     container.dataset.pos = atual;
+}
+</script>
+
+    <script>
+function scrollCarrossel(id, direcao) {
+    const container = document.getElementById(id);
+    const largura = container.clientWidth;
+
+    container.scrollBy({
+        left: largura * direcao,
+        behavior: 'smooth'
+    });
 }
 </script>
 </body>
