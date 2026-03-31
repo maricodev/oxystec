@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>OXYSTEC | Canivetes, Facas e Equipamentos Outdoor</title>
-
-<meta name="description" content="Loja especializada em equipamentos outdoor: canivetes, facas táticas, lanternas e ferramentas. Produtos selecionados com links para compra segura no Mercado Livre e Shopee.">
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+<title>OXYSTEC</title>
 
 <style>
 
@@ -25,12 +20,12 @@ color:#0ff;
 
 .topo{
 text-align:center;
-padding:15px 10px;
+padding:15px 0;
 border-bottom:1px solid #0ff;
 }
 
 .logo-img{
-max-height:120px;
+max-height:150px;
 }
 
 /* MENU */
@@ -38,26 +33,25 @@ max-height:120px;
 .menu{
 display:flex;
 justify-content:center;
-gap:15px;
+gap:20px;
 padding:15px;
 flex-wrap:wrap;
 }
 
 .categoria{
-padding:8px 18px;
+padding:10px 20px;
 border:2px solid #0ff;
 border-radius:50px;
 color:#0ff;
 text-decoration:none;
 transition:.3s;
 box-shadow:0 0 10px #0ff;
-font-size:14px;
 }
 
 .categoria:hover{
 background:#0ff;
 color:black;
-transform:translateY(-3px);
+transform:translateY(-5px);
 }
 
 /* TITULOS */
@@ -80,49 +74,15 @@ display:flex;
 gap:25px;
 overflow-x:auto;
 scroll-behavior:smooth;
-cursor:grab;
 }
 
 .carrossel-container::-webkit-scrollbar{
 display:none;
 }
 
-/* CARD */
-
-.card{
-min-width:300px;
+.carrossel-container .card{
+min-width:calc(33.33% - 17px);
 flex-shrink:0;
-
-background:#0a0a0a;
-border:1px solid #0ff;
-border-radius:12px;
-padding:12px;
-text-align:center;
-box-shadow:0 0 10px #0ff33a;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 0 20px #0ff;
-}
-
-.card img{
-width:100%;
-height:160px;
-object-fit:contain;
-}
-
-.botao{
-display:inline-block;
-margin-top:10px;
-padding:10px;
-background:#0ff;
-color:black;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
-font-size:14px;
 }
 
 /* SETAS */
@@ -142,11 +102,45 @@ box-shadow:0 0 10px #0ff;
 z-index:10;
 }
 
+.seta:hover{
+box-shadow:0 0 20px #0ff;
+}
+
 .seta.esquerda{left:10px;}
 .seta.direita{right:10px;}
 
-.seta:hover{
+/* CARD */
+
+.card{
+background:#0a0a0a;
+border:1px solid #0ff;
+border-radius:12px;
+padding:12px;
+text-align:center;
+box-shadow:0 0 10px #0ff33a;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 box-shadow:0 0 20px #0ff;
+}
+
+.card img{
+width:100%;
+height:150px;
+object-fit:contain;
+}
+
+.botao{
+display:inline-block;
+margin-top:10px;
+padding:10px;
+background:#0ff;
+color:black;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
 }
 
 /* RODAPÉ */
@@ -192,46 +186,26 @@ drop-shadow(0 0 20px #0ff);
 }
 
 .confianca{
-font-size:15px;
+font-size:16px;
 line-height:2;
 }
 
-/* RESPONSIVO */
-
-@media (max-width:768px){
-
-.card{
-min-width:80%;
-}
-
-.logo-img{
-max-height:90px;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
 <header class="topo">
-
 <img src="logooxystec.png" class="logo-img">
-
 <div>Seu mundo Outdoor • Exclusividade em cada produto</div>
-
 </header>
 
-<nav class="menu">
-
+<div class="menu">
 <a href="#canivetes" class="categoria">Canivetes</a>
 <a href="#facas" class="categoria">Facas</a>
 <a href="#lanternas" class="categoria">Lanternas</a>
 <a href="#ferramentas" class="categoria">Ferramentas</a>
-
-</nav>
+</div>
 
 <!-- CANIVETES -->
 
@@ -246,19 +220,31 @@ max-height:90px;
 <div class="card">
 <img src="canivete todo preto oxystec.webp">
 <h3>Canivete SOG Terminus XR</h3>
-<a class="botao" href="produto-canivete-sog.html">Ver produto</a>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
 </div>
 
 <div class="card">
 <img src="D_NQ_NP_2X_911581-MLB108501067641_032026-F.webp">
 <h3>Canivete Kershaw 2200</h3>
-<a class="botao" href="produto-kershaw.html">Ver produto</a>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
 </div>
 
 <div class="card">
 <img src="canivete marrom desert oxystec.webp">
-<h3>Canivete CRKT Desert Outdoor</h3>
-<a class="botao" href="#">Ver produto</a>
+<h3>Canivete CRKT</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
+
+<div class="card">
+<img src="canivete-extra.webp">
+<h3>Outro Canivete</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
+
+<div class="card">
+<img src="canivete-extra.webp">
+<h3>Outro Canivete</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
 </div>
 
 </div>
@@ -279,25 +265,95 @@ max-height:90px;
 
 <div class="card">
 <img src="faca tática oxystec.webp">
-<h3>Faca Kershaw Camp 5 Bowie D2</h3>
-<a class="botao" href="produto-kershaw-camp5.html">Ver produto</a>
+<h3>Faca Kershaw Camp 5</h3>
+<a class="botao" href="https://www.mercadolivre.com.br/faca-tatica-kershaw-camp-5-bowie-aco-d2-full-tang-cabo-nylon/p/MLBU3838393658">
+Compre pelo Mercado Livre
+</a>
 </div>
 
 <div class="card">
 <img src="faca2.webp">
-<h3>Faca Tática Outdoor</h3>
-<a class="botao" href="#">Ver produto</a>
+<h3>Faca Tática</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
 </div>
 
 <div class="card">
 <img src="faca3.webp">
-<h3>Faca Bushcraft</h3>
-<a class="botao" href="#">Ver produto</a>
+<h3>Faca Outdoor</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
 </div>
 
 </div>
 
 <button class="seta direita" onclick="scrollCarrossel('facas-container',1)">❯</button>
+
+</div>
+
+<!-- LANTERNAS -->
+
+<h2 class="section-title" id="lanternas">Lanternas</h2>
+
+<div class="carrossel">
+
+<button class="seta esquerda" onclick="scrollCarrossel('lanternas-container',-1)">❮</button>
+
+<div class="carrossel-container" id="lanternas-container">
+
+<div class="card">
+<img src="imagem-lanterna-1.webp">
+<h3>Lanterna Tática LED</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
+
+<div class="card">
+<img src="imagem-lanterna-2.webp">
+<h3>Lanterna Recarregável</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
+
+<div class="card">
+<img src="imagem-lanterna-3.webp">
+<h3>Lanterna Alta Potência</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
+
+</div>
+
+<button class="seta direita" onclick="scrollCarrossel('lanternas-container',1)">❯</button>
+
+</div>
+
+<!-- FERRAMENTAS -->
+
+<h2 class="section-title" id="ferramentas">Ferramentas</h2>
+
+<div class="carrossel">
+
+<button class="seta esquerda" onclick="scrollCarrossel('ferramentas-container',-1)">❮</button>
+
+<div class="carrossel-container" id="ferramentas-container">
+
+<div class="card">
+<img src="imagem-lanterna-1.webp">
+<h3>Ferramenta</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
+
+<div class="card">
+<img src="imagem-lanterna-2.webp">
+<h3>Ferramenta</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
+
+<div class="card">
+<img src="imagem-lanterna-3.webp">
+<h3>Ferramenta</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
+
+</div>
+
+<button class="seta direita" onclick="scrollCarrossel('ferramentas-container',1)">❯</button>
 
 </div>
 
@@ -315,24 +371,40 @@ max-height:90px;
 <img src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png">
 </a>
 
+<a href="https://mercadolivre.com.br/pagina/oxystec" target="_blank">
+
+<svg class="icone-svg" viewBox="0 0 24 24">
+<path d="M7 6h14l-1.5 9h-11zM7 6L5 2H2"/>
+<circle cx="9" cy="20" r="1.5"/>
+<circle cx="17" cy="20" r="1.5"/>
+</svg>
+
+</a>
+
+<a href="https://shopee.com.br/oxystec" target="_blank">
+
+<svg class="icone-svg" viewBox="0 0 24 24">
+<path d="M6 7V6a6 6 0 1 1 12 0v1h2a1 1 0 0 1 1 1l-1.2 11a2 2 0 0 1-2 2H6.2a2 2 0 0 1-2-2L3 8a1 1 0 0 1 1-1h2zm2 0h8V6a4 4 0 1 0-8 0v1z"/>
+</svg>
+
+</a>
+
 </div>
 
 <div class="linha"></div>
 
 <div class="confianca">
 
-<strong>Compre com segurança pelo Mercado Livre ou Shopee</strong><br><br>
+<strong>Realize suas compras pelo Mercado Livre, Shopee ou pelo Instagram!</strong><br><br>
 
 ✔ Produtos selecionados<br>
-✔ Equipamentos Outdoor<br>
+✔ Frete Grátis<br>
 
 </div>
 
 </footer>
 
 <script>
-
-/* SETAS */
 
 function scrollCarrossel(id,direcao){
 
@@ -343,42 +415,13 @@ const card=container.querySelector('.card')
 const largura=card.offsetWidth+25
 
 container.scrollBy({
+
 left:largura*3*direcao,
 behavior:"smooth"
+
 })
 
 }
-
-/* ARRASTAR COM MOUSE OU DEDO */
-
-const sliders=document.querySelectorAll(".carrossel-container")
-
-sliders.forEach(slider=>{
-
-let isDown=false
-let startX
-let scrollLeft
-
-slider.addEventListener("mousedown",(e)=>{
-isDown=true
-startX=e.pageX-slider.offsetLeft
-scrollLeft=slider.scrollLeft
-})
-
-slider.addEventListener("mouseleave",()=>isDown=false)
-slider.addEventListener("mouseup",()=>isDown=false)
-
-slider.addEventListener("mousemove",(e)=>{
-if(!isDown) return
-e.preventDefault()
-
-const x=e.pageX-slider.offsetLeft
-const walk=(x-startX)*2
-
-slider.scrollLeft=scrollLeft-walk
-})
-
-})
 
 </script>
 
