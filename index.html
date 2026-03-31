@@ -3,279 +3,219 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- FONTE PROFISSIONAL -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 
 <title>OXYSTEC</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Orbitron', sans-serif;
-    background: #000;
-    color: #0ff;
+
+body{
+margin:0;
+font-family:'Orbitron',sans-serif;
+background:#000;
+color:#0ff;
 }
 
 /* TOPO */
-.topo {
-    text-align: center;
-    padding: 15px 0;
-    border-bottom: 1px solid #0ff;
+
+.topo{
+text-align:center;
+padding:15px 0;
+border-bottom:1px solid #0ff;
 }
 
-.logo-img {
-    max-height: 150px;
+.logo-img{
+max-height:150px;
 }
 
 /* MENU */
-.menu {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px;
+
+.menu{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:15px;
+flex-wrap:wrap;
 }
 
-.categoria {
-    padding: 10px 20px;
-    border: 2px solid #0ff;
-    border-radius: 50px;
-    color: #0ff;
-    text-decoration: none;
-    transition: 0.3s;
-    box-shadow: 0 0 10px #0ff;
+.categoria{
+padding:10px 20px;
+border:2px solid #0ff;
+border-radius:50px;
+color:#0ff;
+text-decoration:none;
+transition:.3s;
+box-shadow:0 0 10px #0ff;
 }
 
-.categoria:hover {
-    background: #0ff;
-    color: black;
-    transform: translateY(-5px);
-}
-
-.carrossel {
-    position: relative;
-    padding: 20px;
-}
-
-.carrossel-container {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-}
-
-.carrossel-container::-webkit-scrollbar {
-    display: none;
-}
-
-.carrossel-container .card {
-    min-width: calc(33.33% - 14px);
-    flex-shrink: 0;
-}
-
-/* BOTÕES */
-.seta {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #0ff;
-    color: #000;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #0ff;
-    z-index: 10;
-}
-
-.seta:hover {
-    box-shadow: 0 0 20px #0ff;
-}
-
-.seta.esquerda {
-    left: 10px;
-}
-
-.seta.direita {
-    right: 10px;
+.categoria:hover{
+background:#0ff;
+color:black;
+transform:translateY(-5px);
 }
 
 /* TITULOS */
-.section-title {
-    text-align: center;
-    margin-top: 40px;
+
+.section-title{
+text-align:center;
+margin-top:40px;
 }
 
-/* GRID FIXO 3 COLUNAS */
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding: 20px;
+/* CARROSSEL */
+
+.carrossel{
+position:relative;
+padding:20px;
+overflow:hidden;
 }
 
-/* CARD LIMPO */
-.card {
-    background: #0a0a0a;
-    border: 1px solid #0ff;
-    border-radius: 12px;
-    padding: 12px;
-    text-align: center;
-    box-shadow: 0 0 10px #0ff33a;
-    transition: 0.3s;
+.carrossel-container{
+display:flex;
+gap:25px;
+overflow-x:auto;
+scroll-behavior:smooth;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px #0ff;
+.carrossel-container::-webkit-scrollbar{
+display:none;
 }
 
-/* IMAGEM */
-.card img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
+.carrossel-container .card{
+min-width:calc(33.33% - 17px);
+flex-shrink:0;
 }
 
-/* BOTÃO */
-.botao {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px;
-    background: #0ff;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+/* SETAS */
+
+.seta{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:#0ff;
+color:#000;
+border:none;
+padding:10px 15px;
+cursor:pointer;
+font-size:18px;
+border-radius:50%;
+box-shadow:0 0 10px #0ff;
+z-index:10;
+}
+
+.seta:hover{
+box-shadow:0 0 20px #0ff;
+}
+
+.seta.esquerda{left:10px;}
+.seta.direita{right:10px;}
+
+/* CARD */
+
+.card{
+background:#0a0a0a;
+border:1px solid #0ff;
+border-radius:12px;
+padding:12px;
+text-align:center;
+box-shadow:0 0 10px #0ff33a;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px #0ff;
+}
+
+.card img{
+width:100%;
+height:150px;
+object-fit:contain;
+}
+
+.botao{
+display:inline-block;
+margin-top:10px;
+padding:10px;
+background:#0ff;
+color:black;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
 }
 
 /* RODAPÉ */
-.rodape {
-    margin-top: 60px;
-    padding: 30px;
-    border-top: 2px solid #0ff;
-    text-align: center;
+
+.rodape{
+margin-top:60px;
+padding:30px;
+border-top:2px solid #0ff;
+text-align:center;
 }
 
-/* ÍCONES */
-.redes {
-    margin-bottom: 20px;
+.redes img{
+width:40px;
+margin:0 10px;
+transition:.3s;
 }
 
-.redes img {
-    width: 40px;
-    margin: 0 10px;
-    transition: 0.3s;
+.redes img:hover{
+transform:scale(1.2);
 }
 
-.redes img:hover {
-    transform: scale(1.2);
+.linha{
+height:2px;
+background:#0ff;
+margin:20px auto;
+width:60%;
+box-shadow:0 0 10px #0ff;
 }
 
-/* linha neon */
-.linha {
-    height: 2px;
-    background: #0ff;
-    margin: 20px auto;
-    width: 60%;
-    box-shadow: 0 0 10px #0ff;
+.icone-svg{
+width:40px;
+height:40px;
+fill:#fff;
+margin:0 12px;
+transition:.3s;
 }
 
-/* ícones SVG (carrinho) */
-.icone-svg {
-    width: 40px;
-    height: 40px;
-    fill: #fff;
-    margin: 0 12px;
-    transition: 0.3s;
+.icone-svg:hover{
+transform:scale(1.2);
+filter:drop-shadow(0 0 5px #0ff)
+drop-shadow(0 0 10px #0ff)
+drop-shadow(0 0 20px #0ff);
 }
 
-.icone-svg:hover {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 5px #0ff)
-            drop-shadow(0 0 10px #0ff)
-            drop-shadow(0 0 20px #0ff);
-}
-    
-.icone-link {
-    display: inline-block;
+.confianca{
+font-size:16px;
+line-height:2;
 }
 
-.icone-bag {
-    width: 40px;
-    height: 40px;
-    fill: #fff; /* branco garantido */
-    margin: 0 12px;
-    transition: 0.3s;
-}
-
-/* neon azul no hover */
-.icone-bag:hover {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 5px #0ff)
-            drop-shadow(0 0 10px #0ff)
-            drop-shadow(0 0 20px #0ff);
-}
-/* TEXTO FINAL */
-.confianca {
-    font-size: 16px;
-    line-height: 2;
-}
-/* CARROSSEL FUNCIONANDO */
-.carrossel {
-    position: relative;
-    overflow: hidden;
-}
-
-.carrossel-container {
-    display: flex;
-    gap: 25px;
-    transition: transform 0.4s ease;
-}
-
-.carrossel-container .card {
-    min-width: calc(33.33% - 17px);
-    flex-shrink: 0;
-}
-
-.carrossel-container {
-    display: flex;
-    gap: 25px;
-    transition: transform 0.4s ease;
-    will-change: transform; /* melhora o movimento */
-}
-
-.carrossel-container .card {
-    min-width: calc(33.33% - 17px);
-    flex-shrink: 0;
-}
-    
-</style>
-    
 </style>
 </head>
 
 <body>
 
 <header class="topo">
-    <img src="logooxystec.png" class="logo-img">
-    <div>Seu mundo Outdoor • Exclusividade em cada produto</div>
+<img src="logooxystec.png" class="logo-img">
+<div>Seu mundo Outdoor • Exclusividade em cada produto</div>
 </header>
 
 <div class="menu">
-    <a href="#canivetes" class="categoria">Canivetes</a>
-    <a href="#facas" class="categoria">Facas</a>
-    <a href="#lanternas" class="categoria">Lanternas</a>
-    <a href="#ferramentas" class="categoria">Ferramentas</a>
+<a href="#canivetes" class="categoria">Canivetes</a>
+<a href="#facas" class="categoria">Facas</a>
+<a href="#lanternas" class="categoria">Lanternas</a>
+<a href="#ferramentas" class="categoria">Ferramentas</a>
 </div>
+
+<!-- CANIVETES -->
 
 <h2 class="section-title" id="canivetes">Canivetes</h2>
 
 <div class="carrossel">
-    
-<button class="seta esquerda" onclick="scrollCarrossel('canivetes', -1)">❮</button>
 
-<div class="carrossel-container" id="canivetes">
+<button class="seta esquerda" onclick="scrollCarrossel('canivetes-container',-1)">❮</button>
+
+<div class="carrossel-container" id="canivetes-container">
 
 <div class="card">
 <img src="canivete todo preto oxystec.webp">
@@ -296,12 +236,6 @@ body {
 </div>
 
 <div class="card">
-<img src="canivete marrom desert oxystec.webp">
-<h3>Canivete CRKT</h3>
-<a class="botao" href="#">Compre pelo Mercado Livre</a>
-</div>
-
-<div class="card">
 <img src="canivete-extra.webp">
 <h3>Outro Canivete</h3>
 <a class="botao" href="#">Compre pelo Mercado Livre</a>
@@ -315,19 +249,19 @@ body {
 
 </div>
 
-<button class="seta direita" onclick="scrollCarrossel('canivetes', 1)">❯</button>
+<button class="seta direita" onclick="scrollCarrossel('canivetes-container',1)">❯</button>
 
 </div>
 
-</div>
-    
+<!-- FACAS -->
+
 <h2 class="section-title" id="facas">Facas</h2>
 
 <div class="carrossel">
 
-<button class="seta esquerda" onclick="scrollCarrossel('facas', -1)">❮</button>
+<button class="seta esquerda" onclick="scrollCarrossel('facas-container',-1)">❮</button>
 
-<div class="carrossel-container" id="facas">
+<div class="carrossel-container" id="facas-container">
 
 <div class="card">
 <img src="faca tática oxystec.webp">
@@ -351,17 +285,19 @@ Compre pelo Mercado Livre
 
 </div>
 
-<button class="seta direita" onclick="scrollCarrossel('facas', 1)">❯</button>
+<button class="seta direita" onclick="scrollCarrossel('facas-container',1)">❯</button>
 
 </div>
-    
+
+<!-- LANTERNAS -->
+
 <h2 class="section-title" id="lanternas">Lanternas</h2>
 
 <div class="carrossel">
 
-<button class="seta esquerda" onclick="mover('lanternas', -1)">❮</button>
+<button class="seta esquerda" onclick="scrollCarrossel('lanternas-container',-1)">❮</button>
 
-<div class="carrossel-container" id="lanternas">
+<div class="carrossel-container" id="lanternas-container">
 
 <div class="card">
 <img src="imagem-lanterna-1.webp">
@@ -383,19 +319,19 @@ Compre pelo Mercado Livre
 
 </div>
 
-<button class="seta direita" onclick="mover('lanternas', 1)">❯</button>
+<button class="seta direita" onclick="scrollCarrossel('lanternas-container',1)">❯</button>
 
 </div>
 
-</div>
+<!-- FERRAMENTAS -->
 
 <h2 class="section-title" id="ferramentas">Ferramentas</h2>
 
 <div class="carrossel">
 
-<button class="seta esquerda" onclick="mover('ferramentas', -1)">❮</button>
+<button class="seta esquerda" onclick="scrollCarrossel('ferramentas-container',-1)">❮</button>
 
-<div class="carrossel-container" id="ferramentas">
+<div class="carrossel-container" id="ferramentas-container">
 
 <div class="card">
 <img src="imagem-lanterna-1.webp">
@@ -417,13 +353,12 @@ Compre pelo Mercado Livre
 
 </div>
 
-<button class="seta direita" onclick="mover('ferramentas', 1)">❯</button>
+<button class="seta direita" onclick="scrollCarrossel('ferramentas-container',1)">❯</button>
 
 </div>
 
-</div>
-    
 <!-- RODAPÉ -->
+
 <footer class="rodape">
 
 <div class="redes">
@@ -436,55 +371,59 @@ Compre pelo Mercado Livre
 <img src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png">
 </a>
 
-<!-- MERCADO LIVRE (CARRINHO BONITO) -->
 <a href="https://mercadolivre.com.br/pagina/oxystec" target="_blank">
+
 <svg class="icone-svg" viewBox="0 0 24 24">
-  <path d="M7 6h14l-1.5 9h-11zM7 6L5 2H2"/>
-  <circle cx="9" cy="20" r="1.5"/>
-  <circle cx="17" cy="20" r="1.5"/>
+<path d="M7 6h14l-1.5 9h-11zM7 6L5 2H2"/>
+<circle cx="9" cy="20" r="1.5"/>
+<circle cx="17" cy="20" r="1.5"/>
 </svg>
+
 </a>
 
-<!-- SHOPEE (SACOLA QUE VOCÊ ESCOLHEU) -->
 <a href="https://shopee.com.br/oxystec" target="_blank">
+
 <svg class="icone-svg" viewBox="0 0 24 24">
-  <path d="M6 7V6a6 6 0 1 1 12 0v1h2a1 1 0 0 1 1 1l-1.2 11a2 2 0 0 1-2 2H6.2a2 2 0 0 1-2-2L3 8a1 1 0 0 1 1-1h2zm2 0h8V6a4 4 0 1 0-8 0v1z"/>
+<path d="M6 7V6a6 6 0 1 1 12 0v1h2a1 1 0 0 1 1 1l-1.2 11a2 2 0 0 1-2 2H6.2a2 2 0 0 1-2-2L3 8a1 1 0 0 1 1-1h2zm2 0h8V6a4 4 0 1 0-8 0v1z"/>
 </svg>
+
 </a>
 
 </div>
-    
+
 <div class="linha"></div>
 
 <div class="confianca">
+
 <strong>Realize suas compras pelo Mercado Livre, Shopee ou pelo Instagram!</strong><br><br>
+
 ✔ Produtos selecionados<br>
 ✔ Frete Grátis<br>
 
 </div>
 
 </footer>
-    
+
 <script>
-function scrollCarrossel(id, direcao) {
 
-    const container = document.getElementById(id);
+function scrollCarrossel(id,direcao){
 
-    if (!container) return;
+const container=document.getElementById(id)
 
-    const card = container.querySelector('.card');
+const card=container.querySelector('.card')
 
-    if (!card) return;
+const largura=card.offsetWidth+25
 
-    const gap = 25; 
-    const largura = card.offsetWidth + gap;
+container.scrollBy({
 
-    container.scrollBy({
-        left: largura * 3 * direcao,
-        behavior: "smooth"
-    });
+left:largura*3*direcao,
+behavior:"smooth"
+
+})
 
 }
+
 </script>
+
 </body>
 </html>
