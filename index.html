@@ -6,9 +6,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>OXYSTEC | Canivetes, Facas e Equipamentos Outdoor</title>
+<title>OXYSTEC | Equipamentos Outdoor, Facas e Canivetes</title>
 
-<meta name="description" content="Loja especializada em equipamentos outdoor: canivetes, facas táticas, lanternas e ferramentas. Produtos selecionados com links para compra segura no Mercado Livre e Shopee.">
+<meta name="description" content="Catálogo de equipamentos outdoor: canivetes, facas, lanternas e ferramentas. Veja reviews, comparações e encontre onde comprar no Mercado Livre e Shopee.">
+
+<meta name="keywords" content="canivetes, facas táticas, equipamentos outdoor, lanternas táticas, bushcraft, camping">
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 
@@ -25,7 +27,7 @@ color:#0ff;
 
 .topo{
 text-align:center;
-padding:15px 10px;
+padding:20px;
 border-bottom:1px solid #0ff;
 }
 
@@ -38,9 +40,9 @@ max-height:120px;
 .menu{
 display:flex;
 justify-content:center;
+flex-wrap:wrap;
 gap:15px;
 padding:15px;
-flex-wrap:wrap;
 }
 
 .categoria{
@@ -58,6 +60,22 @@ font-size:14px;
 background:#0ff;
 color:black;
 transform:translateY(-3px);
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:40px 20px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+max-width:600px;
+margin:auto;
 }
 
 /* TITULOS */
@@ -87,16 +105,15 @@ cursor:grab;
 display:none;
 }
 
-/* CARD */
+/* CARD PRODUTO */
 
 .card{
-min-width:300px;
+min-width:280px;
 flex-shrink:0;
-
 background:#0a0a0a;
 border:1px solid #0ff;
 border-radius:12px;
-padding:12px;
+padding:15px;
 text-align:center;
 box-shadow:0 0 10px #0ff33a;
 transition:.3s;
@@ -145,8 +162,34 @@ z-index:10;
 .seta.esquerda{left:10px;}
 .seta.direita{right:10px;}
 
-.seta:hover{
-box-shadow:0 0 20px #0ff;
+/* BLOG */
+
+.blog{
+padding:40px 20px;
+}
+
+.artigos{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.artigo{
+max-width:300px;
+border:1px solid #0ff;
+padding:15px;
+border-radius:10px;
+background:#0a0a0a;
+}
+
+.artigo h3{
+font-size:18px;
+}
+
+.artigo a{
+color:#0ff;
+text-decoration:none;
 }
 
 /* RODAPÉ */
@@ -168,32 +211,9 @@ transition:.3s;
 transform:scale(1.2);
 }
 
-.linha{
-height:2px;
-background:#0ff;
-margin:20px auto;
-width:60%;
-box-shadow:0 0 10px #0ff;
-}
-
-.icone-svg{
-width:40px;
-height:40px;
-fill:#fff;
-margin:0 12px;
-transition:.3s;
-}
-
-.icone-svg:hover{
-transform:scale(1.2);
-filter:drop-shadow(0 0 5px #0ff)
-drop-shadow(0 0 10px #0ff)
-drop-shadow(0 0 20px #0ff);
-}
-
 .confianca{
-font-size:15px;
-line-height:2;
+margin-top:20px;
+line-height:1.8;
 }
 
 /* RESPONSIVO */
@@ -202,6 +222,10 @@ line-height:2;
 
 .card{
 min-width:80%;
+}
+
+.hero h1{
+font-size:22px;
 }
 
 .logo-img{
@@ -220,7 +244,7 @@ max-height:90px;
 
 <img src="logooxystec.png" class="logo-img">
 
-<div>Seu mundo Outdoor • Exclusividade em cada produto</div>
+<p>Equipamentos Outdoor Selecionados</p>
 
 </header>
 
@@ -230,109 +254,139 @@ max-height:90px;
 <a href="#facas" class="categoria">Facas</a>
 <a href="#lanternas" class="categoria">Lanternas</a>
 <a href="#ferramentas" class="categoria">Ferramentas</a>
+<a href="#blog" class="categoria">Reviews</a>
 
 </nav>
 
+<section class="hero">
+
+<h1>Equipamentos Outdoor, Facas e Canivetes</h1>
+
+<p>
+Descubra equipamentos selecionados para camping, bushcraft e EDC.
+Veja análises, comparações e encontre onde comprar com segurança.
+</p>
+
+</section>
+
 <!-- CANIVETES -->
 
-<h2 class="section-title" id="canivetes">Canivetes</h2>
+<h2 class="section-title" id="canivetes">Canivetes Outdoor</h2>
 
 <div class="carrossel">
 
-<button class="seta esquerda" onclick="scrollCarrossel('canivetes-container',-1)">❮</button>
+<button class="seta esquerda" onclick="scrollCarrossel('canivetes',-1)">❮</button>
 
-<div class="carrossel-container" id="canivetes-container">
+<div class="carrossel-container" id="canivetes">
 
 <div class="card">
-<img src="canivete todo preto oxystec.webp">
+<img src="canivete-preto.webp">
 <h3>Canivete SOG Terminus XR</h3>
 <a class="botao" href="produto-canivete-sog.html">Ver produto</a>
 </div>
 
 <div class="card">
-<img src="D_NQ_NP_2X_911581-MLB108501067641_032026-F.webp">
+<img src="kershaw2200.webp">
 <h3>Canivete Kershaw 2200</h3>
 <a class="botao" href="produto-kershaw.html">Ver produto</a>
 </div>
 
 <div class="card">
-<img src="canivete marrom desert oxystec.webp">
-<h3>Canivete CRKT Desert Outdoor</h3>
+<img src="canivete-desert.webp">
+<h3>Canivete CRKT Desert</h3>
 <a class="botao" href="#">Ver produto</a>
 </div>
 
 </div>
 
-<button class="seta direita" onclick="scrollCarrossel('canivetes-container',1)">❯</button>
+<button class="seta direita" onclick="scrollCarrossel('canivetes',1)">❯</button>
 
 </div>
 
 <!-- FACAS -->
 
-<h2 class="section-title" id="facas">Facas</h2>
+<h2 class="section-title" id="facas">Facas Outdoor</h2>
 
 <div class="carrossel">
 
-<button class="seta esquerda" onclick="scrollCarrossel('facas-container',-1)">❮</button>
+<button class="seta esquerda" onclick="scrollCarrossel('facas',-1)">❮</button>
 
-<div class="carrossel-container" id="facas-container">
+<div class="carrossel-container" id="facas">
 
 <div class="card">
-<img src="faca tática oxystec.webp">
-<h3>Faca Kershaw Camp 5 Bowie D2</h3>
+<img src="faca-kershaw.webp">
+<h3>Faca Kershaw Camp 5</h3>
 <a class="botao" href="produto-kershaw-camp5.html">Ver produto</a>
 </div>
 
 <div class="card">
-<img src="faca2.webp">
-<h3>Faca Tática Outdoor</h3>
-<a class="botao" href="#">Ver produto</a>
-</div>
-
-<div class="card">
-<img src="faca3.webp">
-<h3>Faca Bushcraft</h3>
+<img src="faca-bushcraft.webp">
+<h3>Faca Bushcraft Full Tang</h3>
 <a class="botao" href="#">Ver produto</a>
 </div>
 
 </div>
 
-<button class="seta direita" onclick="scrollCarrossel('facas-container',1)">❯</button>
+<button class="seta direita" onclick="scrollCarrossel('facas',1)">❯</button>
 
 </div>
 
-<!-- RODAPÉ -->
+<!-- BLOG / REVIEWS -->
+
+<section class="blog" id="blog">
+
+<h2 class="section-title">Reviews e Guias</h2>
+
+<div class="artigos">
+
+<div class="artigo">
+<h3>Os 7 melhores canivetes para camping</h3>
+<p>Veja nossa seleção dos melhores modelos para atividades outdoor.</p>
+<a href="melhores-canivetes-camping.html">Ler artigo</a>
+</div>
+
+<div class="artigo">
+<h3>Melhores facas para bushcraft</h3>
+<p>Comparação completa entre as facas mais usadas no mato.</p>
+<a href="melhores-facas-bushcraft.html">Ler artigo</a>
+</div>
+
+<div class="artigo">
+<h3>Review SOG Terminus XR</h3>
+<p>Análise completa de um dos canivetes EDC mais populares.</p>
+<a href="review-sog-terminus-xr.html">Ler artigo</a>
+</div>
+
+</div>
+
+</section>
 
 <footer class="rodape">
 
 <div class="redes">
 
-<a href="https://instagram.com/oxystec" target="_blank">
+<a href="https://instagram.com" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png">
 </a>
 
-<a href="https://www.youtube.com/@OXYSTEC" target="_blank">
+<a href="https://youtube.com" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png">
 </a>
 
 </div>
 
-<div class="linha"></div>
-
 <div class="confianca">
 
-<strong>Compre com segurança pelo Mercado Livre ou Shopee</strong><br><br>
-
+<p>
 ✔ Produtos selecionados<br>
-✔ Equipamentos Outdoor<br>
+✔ Links para compra segura no Mercado Livre e Shopee
+</p>
 
 </div>
 
 </footer>
 
 <script>
-
-/* SETAS */
 
 function scrollCarrossel(id,direcao){
 
@@ -343,13 +397,13 @@ const card=container.querySelector('.card')
 const largura=card.offsetWidth+25
 
 container.scrollBy({
-left:largura*3*direcao,
+left:largura*2*direcao,
 behavior:"smooth"
 })
 
 }
 
-/* ARRASTAR COM MOUSE OU DEDO */
+/* arrastar carrossel */
 
 const sliders=document.querySelectorAll(".carrossel-container")
 
