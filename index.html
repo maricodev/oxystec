@@ -22,18 +22,13 @@ color:#0ff;
 
 .topo{
 text-align:center;
-padding:20px 10px;
+padding:15px 0;
 border-bottom:1px solid #0ff;
 }
 
 .logo-img{
-max-height:120px;
+max-height:150px;
 width:auto;
-}
-
-.topo div{
-font-size:14px;
-margin-top:5px;
 }
 
 /* MENU */
@@ -41,65 +36,86 @@ margin-top:5px;
 .menu{
 display:flex;
 justify-content:center;
-gap:15px;
+gap:20px;
 padding:15px;
 flex-wrap:wrap;
 }
 
 .categoria{
-padding:10px 18px;
+padding:10px 20px;
 border:2px solid #0ff;
 border-radius:50px;
 color:#0ff;
 text-decoration:none;
 transition:.3s;
 box-shadow:0 0 10px #0ff;
-font-size:14px;
 }
 
 .categoria:hover{
 background:#0ff;
 color:black;
-transform:translateY(-4px);
+transform:translateY(-5px);
 }
 
 /* TITULOS */
 
 .section-title{
 text-align:center;
-margin-top:50px;
-font-size:28px;
+margin-top:40px;
 }
 
 /* CARROSSEL */
 
 .carrossel{
 position:relative;
-padding:20px 10px;
-overflow:hidden;
+padding:20px;
 }
 
 .carrossel-container{
 display:flex;
-gap:20px;
+gap:25px;
 overflow-x:auto;
 scroll-behavior:smooth;
-padding-bottom:10px;
+-webkit-overflow-scrolling:touch;
 }
 
 .carrossel-container::-webkit-scrollbar{
 display:none;
 }
 
+/* SETAS */
+
+.seta{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:#0ff;
+color:#000;
+border:none;
+padding:10px 15px;
+cursor:pointer;
+font-size:18px;
+border-radius:50%;
+box-shadow:0 0 10px #0ff;
+z-index:10;
+}
+
+.seta:hover{
+box-shadow:0 0 20px #0ff;
+}
+
+.seta.esquerda{left:10px;}
+.seta.direita{right:10px;}
+
 /* CARD */
 
 .card{
-min-width:300px;
+min-width:260px;
 flex-shrink:0;
 background:#0a0a0a;
 border:1px solid #0ff;
 border-radius:12px;
-padding:15px;
+padding:12px;
 text-align:center;
 box-shadow:0 0 10px #0ff33a;
 transition:.3s;
@@ -112,7 +128,7 @@ box-shadow:0 0 20px #0ff;
 
 .card img{
 width:100%;
-height:160px;
+height:150px;
 object-fit:contain;
 }
 
@@ -120,51 +136,26 @@ object-fit:contain;
 
 .botao{
 display:inline-block;
-margin-top:12px;
-padding:10px 14px;
+margin-top:10px;
+padding:10px;
 background:#0ff;
 color:black;
 text-decoration:none;
-border-radius:6px;
+border-radius:5px;
 font-weight:bold;
-font-size:14px;
 }
-
-/* SETAS */
-
-.seta{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-background:#0ff;
-color:#000;
-border:none;
-padding:10px 14px;
-cursor:pointer;
-font-size:18px;
-border-radius:50%;
-box-shadow:0 0 10px #0ff;
-z-index:10;
-}
-
-.seta:hover{
-box-shadow:0 0 20px #0ff;
-}
-
-.seta.esquerda{left:5px;}
-.seta.direita{right:5px;}
 
 /* RODAPÉ */
 
 .rodape{
-margin-top:70px;
-padding:30px 20px;
+margin-top:60px;
+padding:30px;
 border-top:2px solid #0ff;
 text-align:center;
 }
 
 .redes img{
-width:36px;
+width:40px;
 margin:0 10px;
 transition:.3s;
 }
@@ -176,14 +167,14 @@ transform:scale(1.2);
 .linha{
 height:2px;
 background:#0ff;
-margin:25px auto;
+margin:20px auto;
 width:60%;
 box-shadow:0 0 10px #0ff;
 }
 
 .icone-svg{
-width:38px;
-height:38px;
+width:40px;
+height:40px;
 fill:#fff;
 margin:0 12px;
 transition:.3s;
@@ -197,49 +188,20 @@ drop-shadow(0 0 20px #0ff);
 }
 
 .confianca{
-font-size:15px;
+font-size:16px;
 line-height:2;
 }
 
 /* RESPONSIVO */
 
-/* TABLET */
-
-@media(max-width:900px){
+@media(max-width:700px){
 
 .card{
-min-width:260px;
+min-width:80%;
 }
 
-.section-title{
-font-size:24px;
-}
-
-}
-
-/* CELULAR */
-
-@media(max-width:600px){
-
-.menu{
-gap:10px;
-}
-
-.categoria{
-font-size:12px;
-padding:8px 14px;
-}
-
-.card{
-min-width:85%;
-}
-
-.logo-img{
-max-height:90px;
-}
-
-.section-title{
-font-size:22px;
+.seta{
+display:none;
 }
 
 }
@@ -289,6 +251,18 @@ font-size:22px;
 <a class="botao" href="#">Compre pelo Mercado Livre</a>
 </div>
 
+<div class="card">
+<img src="canivete-extra.webp">
+<h3>Outro Canivete</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
+
+<div class="card">
+<img src="canivete-extra.webp">
+<h3>Outro Canivete</h3>
+<a class="botao" href="#">Compre pelo Mercado Livre</a>
+</div>
+
 </div>
 
 <button class="seta direita" onclick="scrollCarrossel('canivetes-container',1)">❯</button>
@@ -308,11 +282,9 @@ font-size:22px;
 <div class="card">
 <img src="faca tática oxystec.webp">
 <h3>Faca Kershaw Camp 5</h3>
-
 <a class="botao" href="https://www.mercadolivre.com.br/faca-tatica-kershaw-camp-5-bowie-aco-d2-full-tang-cabo-nylon/p/MLBU3838393658">
 Compre pelo Mercado Livre
 </a>
-
 </div>
 
 <div class="card">
@@ -379,19 +351,19 @@ Compre pelo Mercado Livre
 
 <div class="card">
 <img src="imagem-lanterna-1.webp">
-<h3>Ferramenta Multiuso</h3>
+<h3>Ferramenta</h3>
 <a class="botao" href="#">Compre pelo Mercado Livre</a>
 </div>
 
 <div class="card">
 <img src="imagem-lanterna-2.webp">
-<h3>Ferramenta Outdoor</h3>
+<h3>Ferramenta</h3>
 <a class="botao" href="#">Compre pelo Mercado Livre</a>
 </div>
 
 <div class="card">
 <img src="imagem-lanterna-3.webp">
-<h3>Ferramenta Tática</h3>
+<h3>Ferramenta</h3>
 <a class="botao" href="#">Compre pelo Mercado Livre</a>
 </div>
 
@@ -400,6 +372,8 @@ Compre pelo Mercado Livre
 <button class="seta direita" onclick="scrollCarrossel('ferramentas-container',1)">❯</button>
 
 </div>
+
+<!-- RODAPÉ COMPLETO -->
 
 <footer class="rodape">
 
@@ -411,6 +385,24 @@ Compre pelo Mercado Livre
 
 <a href="https://www.youtube.com/@OXYSTEC" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png">
+</a>
+
+<a href="https://mercadolivre.com.br/pagina/oxystec" target="_blank">
+
+<svg class="icone-svg" viewBox="0 0 24 24">
+<path d="M7 6h14l-1.5 9h-11zM7 6L5 2H2"/>
+<circle cx="9" cy="20" r="1.5"/>
+<circle cx="17" cy="20" r="1.5"/>
+</svg>
+
+</a>
+
+<a href="https://shopee.com.br/oxystec" target="_blank">
+
+<svg class="icone-svg" viewBox="0 0 24 24">
+<path d="M6 7V6a6 6 0 1 1 12 0v1h2a1 1 0 0 1 1 1l-1.2 11a2 2 0 0 1-2 2H6.2a2 2 0 0 1-2-2L3 8a1 1 0 0 1 1-1h2zm2 0h8V6a4 4 0 1 0-8 0v1z"/>
+</svg>
+
 </a>
 
 </div>
@@ -436,7 +428,7 @@ const container=document.getElementById(id)
 
 const card=container.querySelector('.card')
 
-const largura=card.offsetWidth+20
+const largura=card.offsetWidth+25
 
 container.scrollBy({
 
